@@ -1,0 +1,87 @@
+<html>
+<head>
+<style>
+input[type="button"]{
+font-family: 'Orbitron',sans-serif;
+border-radius:5px;
+color:white;
+background-color:#64278f;
+border: solid black 0.5px;
+width:100%;
+height:70%;
+outline:none;
+}
+input[type="text"]{
+font-family: 'Orbitron',sans serif;
+background-color: #dcdbe1;
+border: solid black 1px;
+color: black;
+border-radius: 5px;
+width: 100%;
+height:65%;
+}
+
+input[type="button"]:hover{
+background-color:#0b03fc;
+}
+</style>
+<script>
+function clr(){
+document.getElementById('display1').value="";
+document.getElementById('display2').value="";
+document.getElementById('display3').value="";
+}
+
+function convert(val){
+var x=document.getElementById('display1').value;
+if(val==1){
+document.getElementById('display2').value=x*0.70;
+}
+else{
+document.getElementById('display3').value=x*0.80;
+}
+}
+</script>
+
+</head>
+
+<body>
+<center>
+<h1>Currency Convertor</h1>
+<table>
+
+<tr>
+<td><hr><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1200px-Flag_of_India.svg.png" width="75" height="50">
+<td><input type="button" value="&#8377" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="display1" ></td>
+</tr>
+
+<tr>
+<td><hr> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Flag_of_the_United_States_%28Pantone%29.svg/1200px-Flag_of_the_United_States_%28Pantone%29.svg.png" width="75" height="50">
+<td><input type="button" value="&#36" onclick="convert('1')" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="display2" ></td>
+</tr>
+
+<tr>
+<td><hr> <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1200px-Flag_of_Germany.svg.png" width="75" height="50">
+<td><input type="button" value="&#x20AC" onclick="convert('2')" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="display3" ></td>
+</tr>
+
+<tr>
+<td><hr><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png" width="75" height="50">
+<td><input type="button" value="&#165" onclick="convert('3')" style="padding-left:20px;padding-right:20px"/></td>
+<td colspan="3"><input type="text" id="display3"></td>
+</tr>
+
+<tr>
+<td colspan="3"><input type="button" value="C" onclick="clr()" style="padding-left:20px;padding-right:20px"/></td>
+
+</tr>
+
+</table>
+</center>
+
+
+</body>
+</html>
